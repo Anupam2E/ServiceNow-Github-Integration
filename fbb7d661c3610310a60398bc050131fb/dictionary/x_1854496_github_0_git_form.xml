@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="46256eadc3a10310a60398bc05013189" label="Git_Form" max_length="40" name="x_1854496_github_0_git_form" type="collection">
+        <element label="Address" max_length="40" name="address" type="string"/>
+        <element label="Phone Number" max_length="40" name="phone_number" type="phone_number_e164"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+    </element>
+</database>
