@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="DELETE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>sakshiborekar</sys_created_by>
+        <sys_created_on>2026-06-16 06:01:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cd59888187a54f50575fcae60cbb35e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope>
+        <sys_update_name>m2m_app_config_theme_cd59888187a54f50575fcae60cbb35e7</sys_update_name>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:01:09</sys_updated_on>
+        <theme/>
+        <ux_app_configuration display_value="Compliance_Portal">4e50147c476d0b107691df58036d4375</ux_app_configuration>
+    </m2m_app_config_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</application>
+        <file_path/>
+        <instance_id>475ae816930a1a18c4e8ddd548373c9f</instance_id>
+        <instance_name>bajajdev</instance_name>
+        <name>m2m_app_config_theme_cd59888187a54f50575fcae60cbb35e7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme"><m2m_app_config_theme action="INSERT_OR_UPDATE"><applicability/><order>0</order><sys_class_name>m2m_app_config_theme</sys_class_name><sys_created_by>sakshiborekar</sys_created_by><sys_created_on>2026-06-16 06:01:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cd59888187a54f50575fcae60cbb35e7</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package><sys_policy/><sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope><sys_update_name>m2m_app_config_theme_cd59888187a54f50575fcae60cbb35e7</sys_update_name><sys_updated_by>sakshiborekar</sys_updated_by><sys_updated_on>2026-06-16 06:01:09</sys_updated_on><theme/><ux_app_configuration display_value="Compliance_Portal">4e50147c476d0b107691df58036d4375</ux_app_configuration></m2m_app_config_theme></record_update>]]></payload>
+        <payload_hash>-467345431</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>847014748721cb50575fcae60cbb35e0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>sakshiborekar</sys_created_by>
+        <sys_created_on>2026-06-16 06:01:09</sys_created_on>
+        <sys_id>c159888187a54f50575fcae60cbb35ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ecf04f5260000001</sys_recorded_at>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:01:09</sys_updated_on>
+        <type>UX App Theme</type>
+        <update_guid>4159888150a54f50a15bf4a6174f84eb</update_guid>
+        <update_guid_history>4159888150a54f50a15bf4a6174f84eb:-467345431</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">076d4c4d87a54f50575fcae60cbb3535</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>sakshiborekar</sys_created_by>
+        <sys_created_on>2026-06-16 06:19:02</sys_created_on>
+        <sys_db_object display_value="" name="m2m_app_config_theme">m2m_app_config_theme</sys_db_object>
+        <sys_id>74a925f9008648f48b8f5740a8859e90</sys_id>
+        <sys_metadata>cd59888187a54f50575fcae60cbb35e7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope>
+        <sys_scope_delete display_value="">40703d28f37047d5aa886b3b460ab5a9</sys_scope_delete>
+        <sys_update_name>m2m_app_config_theme_cd59888187a54f50575fcae60cbb35e7</sys_update_name>
+        <sys_update_version display_value="m2m_app_config_theme_cd59888187a54f50575fcae60cbb35e7">c159888187a54f50575fcae60cbb35ec</sys_update_version>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:19:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

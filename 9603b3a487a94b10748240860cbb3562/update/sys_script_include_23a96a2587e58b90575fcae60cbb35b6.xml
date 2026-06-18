@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_bfbaf_complian_0.test</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>test</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[(function transform(transformBuilder, transformScriptArgs) {
+    try {
+        if(!transformBuilder) return;
+        var listModel = transformBuilder
+        
+        .transform();
+        
+        // Loop through rows and update empty comment cells
+        listModel.rowDefinitions.rows.forEach(function(row) {
+            var commentCell = row.cells['comments']; // Replace with your field name
+            
+            if (commentCell && (!commentCell.value || commentCell.value.trim() === '')) {
+                commentCell.value = '+ Add comment';
+            }
+        });
+        
+        return listModel;
+    }
+    catch(error) {
+        return {
+            failed: true,
+            error: error.message
+        };
+    }
+})(transformBuilder, transformScriptArgs);]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>sakshiborekar</sys_created_by>
+        <sys_created_on>2026-06-18 06:58:42</sys_created_on>
+        <sys_id>23a96a2587e58b90575fcae60cbb35b6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>test</sys_name>
+        <sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope>
+        <sys_update_name>sys_script_include_23a96a2587e58b90575fcae60cbb35b6</sys_update_name>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-18 07:04:18</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2bb8f32847290b107691df58036d43e0" label="BFL Compliance Records" max_length="40" name="x_bfbaf_complian_0_bfl_compliance_records" type="collection">
+        <element label="Reviewer 1" max_length="40" name="reviewer_1" type="string"/>
+        <element label="Day" max_length="40" name="day" type="string"/>
+        <element label="usertype" max_length="100" name="usertype" type="string"/>
+        <element label="module" max_length="40" name="module" type="string"/>
+        <element label="username" max_length="100" name="username" type="string"/>
+        <element label="Backup Type" max_length="40" name="backup_type" type="string"/>
+        <element label="Created Date" max_length="40" name="created_date" type="glide_date"/>
+        <element label="application" max_length="40" name="application" type="string"/>
+        <element label="Reviewer 2" max_length="40" name="reviewer_2" type="string"/>
+    </element>
+</database>

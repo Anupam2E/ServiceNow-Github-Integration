@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_bfbaf_complian_0.test1</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>test1</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[(function transform(transformBuilder, transformScriptArgs) {
+    try {
+        if (!transformBuilder) return;
+
+        var listModel = transformBuilder
+
+        // do not remove
+        .transform();
+
+        /************************************************************
+         * Record List 3:
+         * Only Quarter field editable
+         * All other fields read-only
+         ************************************************************/
+
+        // IMPORTANT:
+        // Replace this with actual backend field name if different
+        var editableField = 'quarter';
+        // Example if field is custom:
+        // var editableField = 'u_quarter';
+
+        // Make only Quarter column editable
+        if (listModel.columnDefinitions && listModel.columnDefinitions.columns) {
+            listModel.columnDefinitions.columns.forEach(function(column) {
+
+                var isEditableColumn = column.key === editableField;
+
+                column.editable = isEditableColumn;
+                column.readOnly = !isEditableColumn;
+                column.disabled = !isEditableColumn;
+
+            });
+        }
+
+        // Make only Quarter cells editable in every row
+        if (listModel.rowDefinitions && listModel.rowDefinitions.rows) {
+            listModel.rowDefinitions.rows.forEach(function(row) {
+
+                if (!row.cells) return;
+
+                Object.keys(row.cells).forEach(function(cellKey) {
+                    var cell = row.cells[cellKey];
+                    var isEditableCell = cellKey === editableField;
+
+                    cell.editable = isEditableCell;
+                    cell.readOnly = !isEditableCell;
+                    cell.disabled = !isEditableCell;
+                });
+
+            });
+        }
+
+        return listModel;
+    }
+
+    catch (error) {
+        return {
+            failed: true,
+            error: error.message
+        };
+    }
+})(transformBuilder, transformScriptArgs);]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>sakshiborekar</sys_created_by>
+        <sys_created_on>2026-06-18 11:39:49</sys_created_on>
+        <sys_id>ad0a2fe587e1cb90575fcae60cbb35d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test1</sys_name>
+        <sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope>
+        <sys_update_name>sys_script_include_ad0a2fe587e1cb90575fcae60cbb35d6</sys_update_name>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-18 11:39:49</sys_updated_on>
+    </sys_script_include>
+</record_update>

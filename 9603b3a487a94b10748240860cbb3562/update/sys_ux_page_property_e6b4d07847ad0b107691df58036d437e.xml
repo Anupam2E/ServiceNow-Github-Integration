@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <name>chrome_toolbar</name>
+        <page display_value="Compliance_Portal">8a50547c476d0b107691df58036d4305</page>
+        <required_translations>[ {
+  "message" : "Access",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Home",
+  "code" : "",
+  "comment" : ""
+} ]</required_translations>
+        <route/>
+        <suffix>chrome_toolbar</suffix>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>mdadnan</sys_created_by>
+        <sys_created_on>2026-06-15 12:12:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>e6b4d07847ad0b107691df58036d437e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>chrome_toolbar</sys_name>
+        <sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope>
+        <sys_update_name>sys_ux_page_property_e6b4d07847ad0b107691df58036d437e</sys_update_name>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-18 05:46:58</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_bfbaf_complian_0.8a50547c476d0b107691df58036d4305.root.global.chrome_toolbar</unique_name>
+        <value>[
+    {
+        "id": "home",
+        "label": {
+            "translatable": true,
+            "message": "Home"
+        },
+        "icon": "home-outline",
+        "routeInfo": {
+            "route": "home"
+        },
+        "group": "top",
+        "order": 100,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "access-360",
+        "label": {
+            "translatable": true,
+            "message": "Access"
+        },
+        "icon": "accessibility-fill",
+        "routeInfo": {
+            "route": "access-360"
+        },
+        "group": "top",
+        "order": 100,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    }
+]</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=e6b4d07847ad0b107691df58036d437e"/>
+</record_update>

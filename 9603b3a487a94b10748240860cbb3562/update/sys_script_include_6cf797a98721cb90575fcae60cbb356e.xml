@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_bfbaf_complian_0.conf</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>conf</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[(function transform(transformBuilder, transformScriptArgs) {
+    try {
+        if (!transformBuilder) return;
+
+        var listModel = transformBuilder
+
+        // do not remove
+        .transform();
+
+        /************************************************************
+         * Allow editing only for Comments field
+         * Make all other fields read-only
+         ************************************************************/
+
+        // CHANGE THIS if your actual field name is different
+        var editableField = 'comments'; 
+        // Example: var editableField = 'u_comments';
+
+        // Make only Comments column editable
+        if (listModel.columnDefinitions && listModel.columnDefinitions.columns) {
+            listModel.columnDefinitions.columns.forEach(function(column) {
+
+                if (column.key === editableField) {
+                    column.editable = true;
+                    column.readOnly = false;
+                    column.disabled = false;
+                } else {
+                    column.editable = false;
+                    column.readOnly = true;
+                    column.disabled = true;
+                }
+
+            });
+        }
+
+        // Make only Comments cells editable in every row
+        if (listModel.rowDefinitions && listModel.rowDefinitions.rows) {
+            listModel.rowDefinitions.rows.forEach(function(row) {
+
+                if (!row.cells) return;
+
+                Object.keys(row.cells).forEach(function(cellKey) {
+                    var cell = row.cells[cellKey];
+
+                    if (cellKey === editableField) {
+                        cell.editable = true;
+                        cell.readOnly = false;
+                        cell.disabled = false;
+                    } else {
+                        cell.editable = false;
+                        cell.readOnly = true;
+                        cell.disabled = true;
+                    }
+                });
+
+            });
+        }
+
+        return listModel;
+    }
+
+    // do not remove
+    catch (error) {
+        return {
+            failed: true,
+            error: error.message
+        };
+    }
+})(transformBuilder, transformScriptArgs);]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>sakshiborekar</sys_created_by>
+        <sys_created_on>2026-06-18 10:20:50</sys_created_on>
+        <sys_id>6cf797a98721cb90575fcae60cbb356e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>conf</sys_name>
+        <sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope>
+        <sys_update_name>sys_script_include_6cf797a98721cb90575fcae60cbb356e</sys_update_name>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-18 10:20:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

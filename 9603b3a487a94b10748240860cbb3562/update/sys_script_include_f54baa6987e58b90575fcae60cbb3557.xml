@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_bfbaf_complian_0.testing</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>testing</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[(function transform(transformBuilder, transformScriptArgs) {
+    try {
+        if(!transformBuilder) return;
+        var listModel = transformBuilder
+        
+        .transform();
+        
+        // Make comments column clickable
+        listModel.columnDefinitions.columns.forEach(function(column) {
+            if (column.key === 'comments') {
+                // Force column to render as links
+                column.type = 'url';
+            }
+        });
+        
+        // Update each cell
+        listModel.rowDefinitions.rows.forEach(function(row) {
+            var commentCell = row.cells['comments'];
+            
+            if (commentCell) {
+                var commentValue = commentCell.value || '';
+                var isEmpty = !commentValue || commentValue.trim() === '';
+                
+                // Set as URL type cell
+                commentCell.type = 'url';
+                
+                if (isEmpty) {
+                    commentCell.label = '+ Add comment';
+                } else {
+                    commentCell.label = commentValue;
+                }
+                
+                // Use javascript:void(0) to make it clickable but not navigate
+                commentCell.value = 'javascript:void(0)';
+                commentCell.target = '_self';
+                
+                // Store original comment value in metadata
+                if (!commentCell.metadata) {
+                    commentCell.metadata = {};
+                }
+                commentCell.metadata.originalComment = commentValue;
+                commentCell.metadata.isEmpty = isEmpty;
+            }
+        });
+        
+        return listModel;
+    }
+    catch(error) {
+        return {
+            failed: true,
+            error: error.message
+        };
+    }
+})(transformBuilder, transformScriptArgs);]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>sakshiborekar</sys_created_by>
+        <sys_created_on>2026-06-18 07:05:41</sys_created_on>
+        <sys_id>f54baa6987e58b90575fcae60cbb3557</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>testing</sys_name>
+        <sys_package display_value="Compliance Portal" source="x_bfbaf_complian_0">9603b3a487a94b10748240860cbb3562</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Compliance Portal">9603b3a487a94b10748240860cbb3562</sys_scope>
+        <sys_update_name>sys_script_include_f54baa6987e58b90575fcae60cbb3557</sys_update_name>
+        <sys_updated_by>sakshiborekar</sys_updated_by>
+        <sys_updated_on>2026-06-18 07:08:35</sys_updated_on>
+    </sys_script_include>
+</record_update>
