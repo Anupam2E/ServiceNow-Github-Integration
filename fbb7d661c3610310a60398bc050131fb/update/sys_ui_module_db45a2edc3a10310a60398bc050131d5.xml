@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Git_Form">9345a2edc3a10310a60398bc050131d0</application>
+        <filter/>
+        <name>Git_Forms</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1854496_github_0.git_form_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 06:39:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>db45a2edc3a10310a60398bc050131d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Git_Forms</sys_name>
+        <sys_package display_value="Github Integration" source="x_1854496_github_0">fbb7d661c3610310a60398bc050131fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Github Integration">fbb7d661c3610310a60398bc050131fb</sys_scope>
+        <sys_update_name>sys_ui_module_db45a2edc3a10310a60398bc050131d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 06:39:35</sys_updated_on>
+        <table>x_1854496_github_0_git_form</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>
